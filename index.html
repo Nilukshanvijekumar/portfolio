@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2347d8deb5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Application Support Engineer</p>
+                <h1>Hi, I'm <span> Nilukshan Vijekumar</span><br> From Dubai</h1>
+
+            </div>
+            </div>
+        </div>
+
+<!-- About -->
+        <div id="about">
+             <div class="container">
+                 <div class="row">
+                     <div class="about-col-1">
+                        <img src="images/image.jpeg">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="subtitle">About Me</h1>
+                            <p>Highly skilled and experienced Ops Engineer with expertise in application support and incident resolution, specializing in optimizing processes
+                                and enhancing system efficiency.Demonstrates a keen eye for detail and a passion for organization, backed by strong analytical
+                                skills, troubleshooting, and configuration capabilities. Proven ability to lead cross-functional teams, drive process
+                                improvements, and enhance operational efficiency. Excels in managing multiple projects simultaneously, consistently
+                                delivering high quality and productivity. Ready to turn challenges into opportunities.
+                                </p>
+
+                            <div class="tab-title">
+                            <p class="tab-links active" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('Experince')">Experince</p>
+                            <p class="tab-links"onclick="opentab('Education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="Skills">
+                                <ul>
+                                   <li><span>Operating Sytem</span><br>Linux,Windows</li>
+                                   <li><span>Database</span><br>SQL,PostgreSQL,MySQL,ETL</li> 
+                                   <li><span>Cloud</span><br>AWS,Azure</li>  
+                                   <li><span>IT Service Management</span><br>ITIL</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Experince">
+                                <ul>
+                                   <li><span>2024 February -2025 March</span><br>Associate Application Support Engineer <br>Teknowledge Shared Services</li>
+                                   <li><span>2023 July-2024 January</span><br>Intern Application Support Engineer <br>Teknowledge Shared Services</li> 
+                                   
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Education">
+                                <ul>
+                                   <li><span>2023</span><br>Bsc (hons) in Computer Science and
+                                    Software Engineering<br>University of Bedfordshire - UK</li>
+                                   <li><span>2018</span><br>GCE\ Advanced level<br>St/Sylvester’s college Kandy
+                                   </li> 
+                                  
+                                </ul>
+                            </div>
+                     </div>       
+                </div>            
+            </div>
+         </div>
+
+
+   <!-- Projects -->
+<div id="projects">
+    <div class="container">
+      <h1 class="subtitle">My Projects</h1>
+      <div class="projet-list">
+  
+        <div class="project-card" id="card1">
+          <i class="fas fa-cloud"></i>
+          <h2>Cloud</h2>
+          
+          <p class="project-links" onclick="toggleProject('card1', 'proj1')">Learn more</p>
+        </div>
+  
+        <div class="project-card" id="card2">
+          <i class="fas fa-database"></i>
+          <h2>Database</h2>
+          
+          <p class="project-links" onclick="toggleProject('card2', 'proj2')">Learn more</p>
+        </div>
+  
+        <div class="project-card" id="card3">
+          <i class="fas fa-desktop"></i>
+          <h2>Operating Systems</h2>
+          
+          <p class="project-links" onclick="toggleProject('card3', 'proj3')">Learn more</p>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  
+    <!-- Contact -->
+
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle"> Contact Me</h1>
+                    <p><i class="fas fa-envelope"></i> nilukshanvije26@gmail.com</p>
+                    <p><i class="fas fa-mobile-alt"></i> 971581463092</p>
+                    <div class="social-icon">
+                        <a href="http://www.linkedin.com/in/nilukshan-vijekumar"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/share/19JEKBvuZm/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/happiest_soul_in_90.s?igsh=YWx6ZHRpbnppYXB0"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="images/Nilukshan Vijekumar.zip" download class="btn btn2"> Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" autocomplete="off" placeholder="Your Name" required>
+                        <input type="email" name="Email" autocomplete="off" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6"autocomplete="off" placeholder="Your Message"></textarea>
+                        <button type="submit"class ="btn btn2">Submit </button>
+                    </form>
+                    <span id="msg"></span>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab (tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxrmOx8y8aE-ottwIaXopohL_FYCMOO1GUoZ9c1hL8hjMiTKq8kVDM_V6qi6v0wD6S-/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent succesfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+   <script>
+    const projectDetails = {
+      proj1: `
+        <div class="project-info">
+          <ul>
+            <li><span>Utilized Azure Monitor and Application Insights to proactively identify and
+resolve application issues, reducing downtime by 20%</span>
+
+            <li><span>Monitored and maintained Azure App Services and VMs hosting production applications, ensuring high availability and resolving deployment or runtime issues.</span>
+            <li><span>Set up Azure Alerts and action groups to proactively detect failures and auto-notify support teams via email and ITSM tools </span>
+             <li><span>Monitored production workloads running on EC2 instances, performing log analysis and instance health checks to resolve performance and availability issues. </span>
+            <li><span>Set up IAM roles and policies to control access to AWS services and audited permissions to ensure least-privilege compliance.</span>
+          </ul>
+        </div>
+      `,
+      proj2: `
+        <div class="project-info">
+          <ul>
+            <li><span>Designed and implemented complex SQL queries to support business
+intelligence and analytics.
+</span><br></li>
+            <li><span>Provided technical support for business applications involving database queries
+and ETL pipelines.
+</span>
+      <li><span> Investigated and optimized slow-running SQL queries that caused application performance issues, reducing load times from 40s to under 5s using indexing and query refactoring.
+</span>
+          </ul>
+        </div>
+      `,
+      proj3: `
+        <div class="project-info">
+          <ul>
+            <li><span>Performed application log analysis and service restarts on Linux-based servers</span>
+            <li><span>Monitored system performance using tools like top, htop, iotop, and netstat and addressing high CPU or memory usage. </span>
+            <li><span>Supported enterprise applications hosted on Windows Server environments, including IIS configuration and service restarts.</span>
+            <li><span>Automated log archival and system cleanup scripts using PowerShell, improving operational efficiency and storage usage.</span>
+        </div>
+      `
+    };
+  
+    function toggleProject(cardId, projectKey) {
+      // Remove existing inserted info boxes
+      document.querySelectorAll('.project-info').forEach(el => el.remove());
+  
+      // Insert the new info box under the selected card
+      const card = document.getElementById(cardId);
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = projectDetails[projectKey];
+      card.appendChild(tempDiv.firstElementChild);
+    }
+  </script>
+  
+      
+    
+
+    
+    
+</body>
+</html>
